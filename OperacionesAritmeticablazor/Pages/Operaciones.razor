@@ -1,0 +1,92 @@
+﻿
+
+<div>
+    <label>Primer Numero:</label>
+    <div>
+        <input  id="TxtNum1" type="number" @bind="Numero1" />
+    </div>
+
+    <div>
+        <label>Segundo Numero:</label>
+    </div>
+
+    <div>
+        <input id="TextNum2" type="number" @bind="Numero2" />
+    </div>
+
+</div>
+
+
+
+<h1>Operaciones:</h1>
+
+<button class="btn btn-primary" @onclick="Sumar"> Sumar </button>
+<div>
+    <p>La Suma es Igual a: @Suma</p>
+</div>
+
+<button class="btn btn-primary" @onclick="Restar"> Restar </button>
+<div>
+    <p> La Resta es Igual a: @Resta</p>
+</div>
+
+<button class="btn btn-primary" @onclick="Multiplicar"> Multiplicar </button>
+<div>
+    <p>La Multiplicacion es Igual a: @Multiplicacion</p>
+</div>
+
+<button class="btn btn-primary" @onclick="Dividir"> Dividir </button>
+<div>
+    <p>La Division es Igual a:@Division</p>
+</div>
+
+
+
+
+
+
+
+@code {
+
+    double Numero1;
+    double Numero2;
+    double Suma;
+    double Resta;
+    double Multiplicacion;
+    double Division;
+
+    private void Sumar()
+    {
+
+        Suma = Numero1 + Numero2;
+
+    }
+
+    private void Restar()
+    {
+
+        Resta = Numero1 - Numero2;
+
+    }
+
+    private void Multiplicar()
+    {
+
+
+        Multiplicacion = Numero1 * Numero2;
+
+    }
+
+    private void Dividir()
+    {
+      
+
+        Division = Numero1 / Numero2;
+
+    }
+
+
+
+
+
+}
